@@ -1,0 +1,74 @@
+{
+  "name": "Device",
+  "friendlyName": "Device",
+  "description": "Built-in device profile. Inherit your device profiles from this profile.",
+  "properties": [
+    {
+      "name": "lastOut",
+      "friendlyName": "lastOut",
+      "qualifiedName": "device$lastout",
+      "description": "The last property written by the device.",
+      "type": "string",
+      "access": "protected",
+      "publish": "never",
+      "retention": {
+        "context": {
+          "type": "default"
+        },
+        "type": "mostrecent",
+        "condition": {
+          "when": "always"
+        }
+      }
+    },
+    {
+      "name": "active",
+      "friendlyName": "active",
+      "qualifiedName": "device$active",
+      "description": "This property is set by the system if device `period` attribute is set.",
+      "type": "enum",
+      "access": "protected",
+      "publish": "never",
+      "retention": {
+        "context": {
+          "type": "default"
+        },
+        "type": "historical",
+        "lifetime": "3months",
+        "capacity": 100000,
+        "condition": {
+          "when": "always"
+        }
+      },
+      "boundaries": {
+        "set": [
+          "active",
+          "inactive",
+          "---"
+        ]
+      }
+    },
+    {
+      "name": "lastIn",
+      "friendlyName": "lastIn",
+      "qualifiedName": "device$lastin",
+      "description": "The last property written by the device.",
+      "tags": [
+        "@@do_not_stream"
+      ],
+      "type": "string",
+      "access": "protected",
+      "publish": "never",
+      "retention": {
+        "context": {
+          "type": "default"
+        },
+        "type": "mostrecent",
+        "condition": {
+          "when": "always"
+        }
+      }
+    }
+  ],
+  "methods": []
+}

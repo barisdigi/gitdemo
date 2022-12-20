@@ -1,0 +1,8 @@
+{
+  "name": "Sample",
+  "friendlyName": "Sample solution template",
+  "description": "App profiles are used to create solution templates. Apps are the materialization of these templates. You can create multiple apps from the same app profile.",
+  "system": [],
+  "properties": [],
+  "methods": []
+}
