@@ -1,0 +1,55 @@
+{
+  "name": "ConnectedDevice",
+  "friendlyName": "Connected Device",
+  "description": "Built-in connected device profile. Inherit your connected device profiles from this profile.",
+  "baseProfile": "Device",
+  "properties": [
+    {
+      "name": "connectionInfo",
+      "friendlyName": "connectionInfo",
+      "qualifiedName": "connecteddevice$connectioninfo",
+      "description": "Additional info about device connection.",
+      "type": "object",
+      "access": "protected",
+      "publish": "never",
+      "retention": {
+        "context": {
+          "type": "default"
+        },
+        "type": "historical",
+        "lifetime": "3months",
+        "capacity": 100000,
+        "condition": {
+          "when": "always"
+        }
+      }
+    },
+    {
+      "name": "connectionStatus",
+      "friendlyName": "connectionStatus",
+      "qualifiedName": "connecteddevice$connectionstatus",
+      "description": "Status of the device connection.",
+      "type": "enum",
+      "access": "protected",
+      "publish": "never",
+      "retention": {
+        "context": {
+          "type": "default"
+        },
+        "type": "historical",
+        "lifetime": "3months",
+        "capacity": 100000,
+        "condition": {
+          "when": "always"
+        }
+      },
+      "boundaries": {
+        "set": [
+          "online",
+          "offline"
+        ]
+      }
+    }
+  ],
+  "methods": []
+}

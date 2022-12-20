@@ -1,0 +1,11 @@
+{
+  "name": "Gateway",
+  "friendlyName": "Gateway",
+  "description": "Built-in gateway profile. Can be used as a template for gateway devices in traditional sense or to represents external device backends. You can assign child devices to gateways to write/read data using single key (i.e. gateway's key).",
+  "tags": [
+    "gateway"
+  ],
+  "baseProfile": "ConnectedDevice",
+  "properties": [],
+  "methods": []
+}
